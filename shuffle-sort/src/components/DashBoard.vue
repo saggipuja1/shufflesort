@@ -12,7 +12,10 @@
        v-for="(item,i) in items" >{{ item }}</div>
     </div>
     <div class="cards" v-if="shuffled">
-      <div class="card" v-for="i in shuffledArray" :key="i.id">{{ i }}</div>
+      <div class="card"
+      v-bind:style="{backgroundColor: colors[j]}"
+      :key="j"
+       v-for="(i,j) in shuffledArray">{{ i }}</div>
     </div>
   </div>
 <div class = "col smallitem">
